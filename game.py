@@ -26,7 +26,7 @@ class Game:
         mapLayer = pyscroll.orthographic.BufferedRenderer(mapData, self.screen.get_size())
         #Ajout des variables permettant de controler la vitesse et le nombre de taupe qui apparaîssent
         self.spawnTime = 50000/1000
-        self.nombreSpawn = 25
+        self.nombreSpawn = 5
         # Ajout d'une variable pour indiquer si le temps est écoulé
         self.finTemps = False
         self.score = 0
@@ -176,7 +176,6 @@ class Game:
             self.activationFever = False
             self.feverActiverUneFois = False
         elif self.tempsActuel < 30 and self.feverPourcentage >=100:
-            print("OK")
             self.activationFever = True
             self.feverActiverUneFois = True
             self.player.speed = 3
